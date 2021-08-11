@@ -1,0 +1,21 @@
+{
+    "name": "tashlykov/ip-parser",
+    "description": "IP parser",
+    "type": "library",
+    "require": {
+        "geoip2/geoip2": "^2.11",
+        "illuminate/support": "^8.54"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Igor Tashlykov",
+            "email": "igort060487@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\Services\\IpParser": "app/"
+        }
+    }
+}
