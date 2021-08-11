@@ -4,7 +4,7 @@
     "type": "library",
     "require": {
         "geoip2/geoip2": "^2.11",
-        "illuminate/support": "^v8.54.0"
+        "illuminate/support": "^v8.53.0"
     },
     "license": "MIT",
     "authors": [
