@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Services\IpParser\Adapters;
+namespace App\Adapters;
 
-use App\Services\IpParser\Adapters\Interfaces\ParserAdapterInterface;
+use App\Adapters\Interfaces\ParserAdapterInterface;
 use GeoIp2\Database\Reader;
 use GeoIp2\Model\City;
 
 /**
  * Class MaxMindAdapter
- * @package App\Services\IpParser\Adapters
+ * @package App\Adapters
  */
 class MaxMindAdapter implements ParserAdapterInterface
 {
