@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Services\IpParser\Adapters\Interfaces;
+namespace Tashlykov\IpParser\Adapters\Interfaces;
 
 /**
  * Interface ParserAdapterInterface
- * @package App\Services\IpParser\Adapters\Interfaces
+ * @package Tashlykov\IpParser\Adapters\Interfaces
  */
 interface ParserAdapterInterface
 {

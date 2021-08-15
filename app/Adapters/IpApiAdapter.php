@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Services\IpParser\Adapters;
+namespace Tashlykov\IpParser\Adapters;
 
-use App\Services\IpParser\Adapters\Interfaces\ParserAdapterInterface;
+use Tashlykov\IpParser\Adapters\Interfaces\ParserAdapterInterface;
 use Illuminate\Support\Facades\Http;
 
 /**
  * Class IpApiAdapter
- * @package App\Services\IpParser\Adapters
+ * @package Tashlykov\IpParser\Adapters
  */
 class IpApiAdapter implements ParserAdapterInterface
 {
