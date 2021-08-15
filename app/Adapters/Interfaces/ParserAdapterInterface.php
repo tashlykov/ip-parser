@@ -12,6 +12,7 @@ interface ParserAdapterInterface
 {
     /**
      * @param string $ip
+     * @param ProviderInterface|null $reader
      * @return bool
      */
     public function parse(string $ip, ProviderInterface $reader = null): bool;
