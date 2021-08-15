@@ -2,6 +2,8 @@
 
 namespace Tashlykov\IpParser\Adapters\Interfaces;
 
+use GeoIp2\ProviderInterface;
+
 /**
  * Interface ParserAdapterInterface
  * @package Tashlykov\IpParser\Adapters\Interfaces
@@ -12,7 +14,7 @@ interface ParserAdapterInterface
      * @param string $ip
      * @return bool
      */
-    public function parse(string $ip): bool;
+    public function parse(string $ip, ProviderInterface $reader = null): bool;
 
     /**
      * @return string

@@ -2,6 +2,7 @@
 
 namespace Tashlykov\IpParser\Adapters;
 
+use GeoIp2\ProviderInterface;
 use Tashlykov\IpParser\Adapters\Interfaces\ParserAdapterInterface;
 use GeoIp2\Database\Reader;
 use GeoIp2\Model\City;
@@ -14,9 +15,9 @@ class MaxMindAdapter implements ParserAdapterInterface
 {
 
     /**
-     * @var Reader
+     * @var ?Reader
      */
-    private Reader $reader;
+    private ?Reader $reader;
     /**
      * @var City
      */
@@ -28,9 +29,9 @@ class MaxMindAdapter implements ParserAdapterInterface
      * @throws \GeoIp2\Exception\AddressNotFoundException
      * @throws \MaxMind\Db\Reader\InvalidDatabaseException
      */
-    public function parse(string $ip): bool
+    public function parse(string $ip, ProviderInterface $reader = null): bool
     {
-        $this->reader = new Reader(resource_path('geo/GeoLite2-City.mmdb'));
+        $this->reader = $reader;
         $this->record = $this->reader->city($ip);
 
         return (bool)$this->record;

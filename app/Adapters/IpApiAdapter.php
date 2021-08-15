@@ -2,6 +2,7 @@
 
 namespace Tashlykov\IpParser\Adapters;
 
+use GeoIp2\ProviderInterface;
 use Tashlykov\IpParser\Adapters\Interfaces\ParserAdapterInterface;
 use Illuminate\Support\Facades\Http;
 
@@ -26,7 +27,7 @@ class IpApiAdapter implements ParserAdapterInterface
      * @param string $ip
      * @return bool
      */
-    public function parse(string $ip): bool
+    public function parse(string $ip, ProviderInterface $reader = null): bool
     {
         $response = Http::get(self::URL . $ip)->json();
 
